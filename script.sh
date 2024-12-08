@@ -21,11 +21,13 @@ apt install unzip -y
 echo " "
 
 echo "Etapa 5/6 - Baixando aplicação"
+cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 echo " "
 
 echo "Etapa 6/6 - Copiando aplicação na pasta do apache"
-cp ./linux-site-dio-main/* /var/www/html/ -r
+unzip main.zip
+cp /tmp/linux-site-dio-main/* /var/www/html/ -r
 echo " "
 
 echo "Etapa 7/7 - restartando apache2"
